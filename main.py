@@ -4,6 +4,13 @@ from googletrans import Translator
 message = AnaliseSentimentos()
 
 translatedText = Translator().translate(text=input('Digite um texto: '), dest='pt')
-message.avalia(translatedText.text)
+result = message.avalia(translatedText.text)
+
+if (result['polaridade'] > 0):
+    print('Frase positiva')
+elif (result['polaridade'] < 0):
+     print('Frase negativa')
+else:
+    print('Frase Neutra')
 
 

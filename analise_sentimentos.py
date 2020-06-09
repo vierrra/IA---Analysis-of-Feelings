@@ -33,13 +33,6 @@ class AnaliseSentimentos:
 
             #Checa se existe no dicionário
             if (palavra in self.__dicionario):
-                retorno['polaridade'] += self.__dicionario[palavra] 
-        
-        if (retorno['polaridade'] > 0):
-            print('Frase positiva')
-        elif (retorno['polaridade'] < 0):
-            print('Frase negativa')
-        else:
-            print('Frase Neutra')
+                retorno['polaridade'] += self.__dicionario[palavra]
             
         return retorno
